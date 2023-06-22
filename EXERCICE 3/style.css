@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Chicle&display=swap");
+
 body {
   background-color: yellowgreen;
   width: 100%;
@@ -7,11 +9,16 @@ body {
   justify-items: center;
   align-items: center;
   align-content: center;
-  border: solid black;
+  /* border: solid black; */
 }
 h1 {
+  font-family: "Chicle", cursive;
+  font-size: 50px;
+  color: rgb(212, 245, 128);
+  margin-top: 15px;
+  margin-bottom: 20px;
   display: flex;
-  border: solid black;
+  /* border: solid black; */
   height: fit-content;
   width: fit-content;
 }
@@ -23,25 +30,37 @@ h1 {
   height: 35rem;
   flex-direction: column;
   align-items: center;
-  border: solid rgb(175, 37, 37);
+  /* border: solid rgb(175, 37, 37); */
 }
-
+img {
+  /* align-items: center;
+  justify-content: center; */
+  width: 100px;
+  height: 100px;
+}
 .raw1,
 .raw2,
 .raw3 {
-  border: solid black;
+  /* border: solid black; */
   width: 60%;
   height: 30%;
   display: flex;
   justify-content: space-between;
   margin: 20px;
+  align-items: center;
 }
 
 .cercle {
   border-radius: 50%;
-  background-color: hotpink;
-  border: 2px solid black;
-  height: 200px;
-  width: 200px;
+  background-color: rgb(212, 245, 128);
+  align-items: center;
+  justify-content: center;
+  /* border: 2px solid black; */
+  height: 175px;
+  width: 175px;
   margin-top: 0;
+  background-image: url("flower-removebg-preview.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
