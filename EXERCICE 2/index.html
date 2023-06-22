@@ -9,8 +9,34 @@
     
 </body>
 <script>
-
-
+function displaySeconds() {
+  let seconds = 0;
+  let intervalId = setInterval(function() {
+    seconds++;
+    let minute = Math.floor(seconds / 60);
+    let second = seconds % 60;
+    let timePassed;
     
+    if (minute > 1) {
+      timePassed = `${minute} minutes have passed`;
+    } else if (minute === 1) {
+      timePassed = '1 minute has passed';
+    } else {
+      timePassed = `${second} seconds have passed`;
+    }
+    
+    let paragraph = document.createElement('p');
+    paragraph.innerHTML = timePassed;
+  }, 1000);
+}
+
+window.onload = function() {
+  let paragraph = document.createElement('p');
+  paragraph.id = 'timePassed';
+  let h2 = document.querySelector('h2');
+  h2.appendChild(paragraph);
+  
+  displaySeconds();
+};
 </script>
 </html>
