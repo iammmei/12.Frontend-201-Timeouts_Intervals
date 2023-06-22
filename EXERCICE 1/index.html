@@ -9,9 +9,29 @@
         
 </body>
 <script>
-    function Prout
+    // initializing the function that will write the paragraph by writting (word,paragraph ) we are just giving a word for them to use in the function and assign them things 
 
-    setInterval(,2000)
+  function writeProut(word, paragraph) {
+    //will start from 0
+  let index = 0;
+// just using the setInterval stuff
+  let intervalId = setInterval(function() {
+    //as long as the index will be smaller than the word length 
+    if (index < word.length) {
+        //in the paragraph we will add a letter thanx to charAt and increasing the index 1+ each time
+      paragraph.innerHTML += word.charAt(index);
+      index++;
+    } else {
+        // when word length achieved it will stop 
+      clearInterval(intervalId);
+    }
+  }, 1000);
+}
+
+let paragraph = document.createElement('p');
+document.body.appendChild(paragraph);
+// making the function work and chosing the word "prout"
+writeProut("prout", paragraph);
 
 
 
