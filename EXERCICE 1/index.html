@@ -9,6 +9,7 @@
      <h1> Write a function that mimics the behaviour of a typewriter.</h1>
 
        <h2> Using setInterval display the word prout one character at a time (one letter per second). Once the word is written on the screen clear the interval. </h2>
+      <img src="typewriter.jpg">
 </body>
 <script>
 
@@ -33,7 +34,8 @@
 }
 
 let paragraph = document.createElement('p');
-document.body.appendChild(paragraph);
+let h2 =document.querySelector('h2')
+h2.appendChild(paragraph);
 // making the function work and chosing the word "prout"
 writeProut("prout", paragraph);
 
